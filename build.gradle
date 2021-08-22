@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def selenideVersion = '5.23.2',
+    junitVersion = '5.7.2'
+
+dependencies {
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter-api:$junitVersion',
+            'com.codeborne:selenide:$selenideVersion'
+    )
+
+    testRuntimeOnly (
+            'org.junit.jupiter:junit-jupiter-engine:$junitVersion',
+            'org.slf4j:slf4j-simple:1.7.30'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
