@@ -34,6 +34,7 @@ public class TestDownloadDocx {
         XWPFWordExtractor extract = new XWPFWordExtractor(document);
         String fileContent = extract.getText();
         Assertions.assertTrue(fileContent.contains("Отчет по геологии 101"));
+        document.close();
     }
 
 }

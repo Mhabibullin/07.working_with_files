@@ -16,6 +16,7 @@ public class ReadDocxFile {
             XWPFWordExtractor extractor = new XWPFWordExtractor(document);
             String fileContent = extractor.getText();
             Assertions.assertTrue(fileContent.contains("Отчет по геологии 101"));
+            document.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
