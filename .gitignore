@@ -25,6 +25,7 @@
 *.nar
 *.ear
 *.zip
+!cv.zip
 *.tar.gz
 *.rar
 *.iml
