@@ -6,15 +6,21 @@ repositories {
     mavenCentral()
 }
 
+def junitVersion = "5.7.2",
+    selenideVersion = "5.23.2",
+    apachePOIVersion = "5.0.0",
+    pdfboxVersion = "2.0.24"
+
 dependencies {
     testImplementation (
-            'org.junit.jupiter:junit-jupiter-api:5.7.2',
-            'com.codeborne:selenide:5.23.2',
-            'org.apache.poi:poi-ooxml:5.0.0'
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "com.codeborne:selenide:${selenideVersion}",
+            "org.apache.poi:poi-ooxml:${apachePOIVersion}",
+            "org.apache.pdfbox:pdfbox:${pdfboxVersion}"
     )
 
     testRuntimeOnly (
-            'org.junit.jupiter:junit-jupiter-engine:5.7.2',
+            'org.junit.jupiter:junit-jupiter-engine:${junitVersion}',
             'org.slf4j:slf4j-simple:1.7.30'
     )
 }
