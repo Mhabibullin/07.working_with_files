@@ -9,14 +9,16 @@ repositories {
 def junitVersion = "5.7.2",
     selenideVersion = "5.23.2",
     apachePOIVersion = "5.0.0",
-    pdfboxVersion = "2.0.24"
+    pdfboxVersion = "2.0.24",
+    zip4jVersion = "2.9.0"
 
 dependencies {
     testImplementation (
-            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
-            "com.codeborne:selenide:${selenideVersion}",
-            "org.apache.poi:poi-ooxml:${apachePOIVersion}",
-            "org.apache.pdfbox:pdfbox:${pdfboxVersion}"
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.apache.poi:poi-ooxml:$apachePOIVersion",
+            "org.apache.pdfbox:pdfbox:$pdfboxVersion",
+            "net.lingala.zip4j:zip4j:$zip4jVersion"
     )
 
     testRuntimeOnly (
