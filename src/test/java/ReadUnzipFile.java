@@ -1,5 +1,4 @@
 import net.lingala.zip4j.ZipFile;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
