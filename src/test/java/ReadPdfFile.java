@@ -1,4 +1,3 @@
-import org.apache.hc.core5.util.Asserts;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.junit.jupiter.api.Assertions;
