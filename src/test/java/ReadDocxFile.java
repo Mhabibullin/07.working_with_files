@@ -1,9 +1,10 @@
-import java.io.File;
-import java.io.FileInputStream;
-
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.io.FileInputStream;
 
 public class ReadDocxFile {
         @Test
@@ -14,8 +15,8 @@ public class ReadDocxFile {
             XWPFDocument document = new XWPFDocument(fileInputStream);
             XWPFWordExtractor extractor = new XWPFWordExtractor(document);
             String fileContent = extractor.getText();
-            Assertions.assertTrue(fileContent.contains("Отчет по геологии 101"));
-            document.close();
+                Assertions.assertTrue(fileContent.contains("101"));
+                document.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
